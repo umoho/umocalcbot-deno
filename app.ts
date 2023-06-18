@@ -39,9 +39,9 @@ bot.command("calc", async ctx => {
     }
 });
 
-bot.on("message", async ctx => {
-    const messageId = ctx.message.message_id;
-    const text = ctx.message.text;
+bot.on("msg:text", async ctx => {
+    const messageId = ctx.message?.message_id;
+    const text = ctx.message?.text;
     try {
         if (text !== undefined) {
             const result = calculate(text);
