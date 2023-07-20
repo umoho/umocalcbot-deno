@@ -25,6 +25,7 @@ bot.command(["c", "calc", "calculate"], async ctx => {
             reply_to_message_id: messageId,
         });
     } catch (err) {
+        console.error(`Error: ${err}`);
         await ctx.reply(`Error: ${err}`, {
             reply_to_message_id: messageId,
         });
@@ -42,6 +43,7 @@ bot.on("msg:text", async ctx => {
             });
         } else throw `text is undefined`;
     } catch (err) {
+        console.error(`Error: ${err}`);
         await ctx.reply(`Error: ${err}`, {
             reply_to_message_id: messageId,
         });
