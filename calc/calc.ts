@@ -6,6 +6,8 @@ import { display } from "./value.ts";
 export { calculate };
 
 function calculate(input: string): string {
+    console.log(`Calculate Input:`, input);
+
     const tokens = getTokens(input);
 
     const parser = new Parser(tokens);
@@ -14,7 +16,7 @@ function calculate(input: string): string {
 
     const result = eval_(expr);
 
-    console.log(`Result`, result);
+    console.log(`Calculate Result:`, result);
 
     return display(result);
 }
