@@ -16,7 +16,7 @@ bot.command(["start", "help"], async ctx => {
     });
 });
 
-bot.command("calc", async ctx => {
+bot.command(["c", "calc", "calculate"], async ctx => {
     const messageId = ctx.message?.message_id;
     const exprText = ctx.match;
     try {
