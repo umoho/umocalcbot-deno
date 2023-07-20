@@ -14,7 +14,7 @@ function calculate(input: string): string {
 
     const result = eval_(expr);
 
-    console.log(result);
+    console.log(`Result`, result);
 
     return display(result);
 }
