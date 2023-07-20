@@ -8,37 +8,6 @@ console.log("Bot started.");
 
 const helpText = await Deno.readTextFile("help_message_en.txt");
 
-bot.on("inline_query", async ctx => {
-    const text = ctx.inlineQuery.query;
-    console.log(text);
-    try {
-        const result = calculate(text);
-        await ctx.answerInlineQuery([
-            {
-                type: "article",
-                id: "calculator-answer",
-                title: "Result",
-                input_message_content: {
-                    message_text: `<code>${text}</code> = <code>${result}</code>`,
-                    parse_mode: "HTML",
-                }
-            }
-        ]);
-    } catch (err) {
-        await ctx.answerInlineQuery([
-            {
-                type: "article",
-                id: "calculator-error",
-                title: "Error",
-                input_message_content: {
-                    message_text: `Error while calculating <code>${text}</code>:\n${err}`,
-                    parse_mode: "HTML",
-                }
-            }
-        ]);
-    }
-});
-
 bot.command(["start", "help"], async ctx => {
     const messageId = ctx.message?.message_id;
     await ctx.reply(helpText, {
