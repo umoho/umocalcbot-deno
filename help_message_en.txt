@@ -1,0 +1,12 @@
+You can just send the expression you want to calculate to me,
+or use command <code>/calc ...</code>
+
+<b>Help</b>:
+    Available operations: <code>+</code> (plus), <code>-</code> (minus), <code>*</code> (multi), <code>/</code> (divide)
+    Use parentheses <code>(</code> and <code>)</code> to increase priority
+    Multiplication and division have higher priority than addition
+    <code>0</code> before decimal separator can be omitted
+
+<b>Example</b>:
+    <code>.1 + .1 + .1</code>
+    <code>(20 + 1) * 2</code>

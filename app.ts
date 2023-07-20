@@ -6,17 +6,7 @@ const bot = new Bot(token);
 
 console.log("Bot started.");
 
-const helpText =
-    `You can just send the expression you want to calculate to me `
-    + `or use command <code>/calc ...</code>\n`
-    + `Help:\n`
-    + `  Available operations: <code>+</code> (plus), <code>-</code> (minus), <code>*</code> (multi), <code>/</code> (divide)\n`
-    + `  Use parentheses <code>(</code> and <code>)</code> to increase priority\n`
-    + `  Multiplication and division have higher priority than addition\n`
-    + `  <code>0</code> before decimal separator can be omitted\n`
-    + `Example:\n`
-    + `  <code>.1 + .1 + .1</code>\n`
-    + `  <code>(20 + 1) * 2</code>`;
+const helpText = await Deno.readTextFile("help_message_en.txt");
 
 bot.on("inline_query", async ctx => {
     const text = ctx.inlineQuery.query;
