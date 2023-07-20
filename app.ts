@@ -33,6 +33,9 @@ bot.command(["c", "calc", "calculate"], async ctx => {
 });
 
 bot.on("msg:text", async ctx => {
+    if (ctx.chat.type !== "private") {
+        return;
+    }
     const messageId = ctx.message?.message_id;
     const text = ctx.message?.text;
     try {

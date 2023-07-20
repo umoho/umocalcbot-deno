@@ -1,5 +1,4 @@
-You can just send the expression you want to calculate to me,
-or use command <code>/c ...</code> (or <code>/calc ...</code>, <code>/calculate ...</code>)
+You can just send the expression you want to calculate to me in private chat, or use command <code>/c ...</code> (or <code>/calc ...</code>, <code>/calculate ...</code>)
 
 <b>Help</b>:
     Available operations: <code>+</code> (plus), <code>-</code> (minus), <code>*</code> (multi), <code>/</code> (divide)
@@ -10,4 +9,3 @@ or use command <code>/c ...</code> (or <code>/calc ...</code>, <code>/calculate 
 <b>Example</b>:
     <code>.1 + .1 + .1</code>
     <code>(20 + 1) * 2</code>
-    <code>/c 114 / 514</code>
